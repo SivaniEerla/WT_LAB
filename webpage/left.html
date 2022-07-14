@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+.side-navigation{	
+	
+	float: left;
+	height: 100%;
+	width: 100%;
+	background: #e7e9eb;
+	font-family: Georgia;
+	
+}
+#idNo{
+	background:#e7e9eb;
+}
+.side-navigation a{
+	text-decoration: none;
+}
+.out1 ul li{
+	padding: 0px;
+	width: 100%;
+
+}
+.out1 ul li a{
+	padding: 10px;
+	display: block;
+}
+.out1 ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.out1 li{
+	position: relative;
+	left: 80px;
+}
+.in ul li a:hover{
+	background-color: #b3b3b3;
+}
+
+</style>
+</head>
+<body>
+<aside>
+		<div class="side-navigation">
+			<div class="out1">
+				<h3 align="center" id="search">Search </h3>
+				<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+				<ul id="idNo">
+
+					<li><a href="#">N180202</a></li>
+					<li><a href="#">N180201</a></li>
+					<li><a href="#">N180100</a></li>
+					<li><a href="#">Exam</a></li>
+					<li><a href="#">home</a></li>
+					<li><a href="#">N180036</a></li>
+					<li><a href="#">N180547</a></li>
+					<li><a href="#">N180333</a></li>
+					<li><a href="#">N180100</a></li>
+					<li><a href="#">N180311</a></li>
+					<li><a href="#">N180419</a></li>
+					<li><a href="#">N180736</a></li>
+					<li><a href="#">N180147</a></li>
+					<li><a href="#">N180109</a></li>
+					<li><a href="#">N180340</a></li>
+					<li><a href="#">N181111</a></li>
+					<li><a href="#">N180789</a></li>
+					<li><a href="#">N180976</a></li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<script>
+		function myFunction() {
+  			var input, filter, ul, li, a, i;
+ 			input = document.getElementById("mySearch");
+    		filter = input.value.toUpperCase();
+  			ul = document.getElementById("idNo");
+  			li = ul.getElementsByTagName("li");
+  			for (i = 0; i < li.length; i++)
+  			{
+    			a = li[i].getElementsByTagName("a")[0];
+    			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      				li[i].style.display = "";
+    			}
+    			else {
+     	 			li[i].style.display = "none";
+    			}
+  			}
+	}
+	</script>
+</body>
+</html>
