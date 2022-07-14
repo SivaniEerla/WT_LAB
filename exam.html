@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+background-color:#0000FF;
+width: 700px;
+}
+#heading{
+background-color:#09226B;
+color:white;
+height:100px;
+}
+
+#first{
+width:310px;
+height:35px;
+position:relative;
+left:93px;
+}
+#middle{
+width:310px;
+height:35px;
+position:relative;
+left:93px;
+}
+#last{
+width:310px;
+height:35px;
+position:relative;
+left:93px;
+}
+#pass{
+width:310px;
+height:35px;
+position:relative;
+
+}
+#f1{
+display:inline;
+position:relative;
+left:100px;
+font-family:Helvetica;
+visibility:hidden;
+}
+#f2{
+display:inline;
+position:relative;
+left:100px;
+font-family:Helvetica;
+visibility:hidden;
+}
+#f3{
+display:inline;
+position:relative;
+left:100px;
+font-family:Helvetica;
+visibility:hidden;
+}
+#list1{
+position:relative;
+left:49px;
+width:52px;
+height:35px;
+}
+#mobile{
+position:relative;
+left:52px;	
+width:260px;
+height:35px;
+}
+#num{
+display:inline;
+position:relative;
+left:80px;
+font-family:Helvetica;
+visibility:hidden;
+}
+
+#email{
+width:310px;
+height:35px;
+}
+#hobbyerror{
+display:inline;
+position:relative;
+left:150px;
+visibility:hidden;
+}
+#hobbies{
+display:inline;
+font-family:helvetica;
+position:relative;
+}
+
+#pic{
+display:inline;
+position:relative;
+left:45px;
+text-decoration:bold;
+font-family:Helvetica;
+}
+#image{
+position:relative;
+left:45px;
+}
+
+#submit {
+  width: 140px;
+  height: 45px;
+  font-family: helvetica;
+ font-weight:bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: blue;
+  border: none;
+ border-radius:20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+#birth{
+display:inline;
+position:relative;
+right:46px;	
+font-family:helvetica;
+}
+#submit1 {
+  width: 140px;
+  height: 45px;
+  font-family: helvetica;
+ font-weight:bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color:blue;
+  border: none;
+ border-radius:20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+#submit:hover {
+  background-color:#56953e ;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#submit1:hover {
+  background-color:#56953e ;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#date{
+position:relative;
+right:40px;	
+}
+#addr{
+position:relative;
+right:123px;
+display:inline;
+font-family:Helvetica;
+}
+#address{
+position:relative;
+}
+.hobby{
+display:inline;
+font-family:helvetica;
+}
+#age{
+width:20px;
+position:relative;
+right:30px;
+}
+.age{
+display:inline;
+font-family:helvetica;
+position:relative;
+right:30px;
+}
+#hobbyerror{
+
+
+}
+</style>
+<script>
+function calculate_age() { 
+  var userinput = document.getElementById("date").value;  
+    var dob = new Date(userinput);  
+ var month_diff = Date.now() - dob.getTime();  
+      
+    //convert the calculated difference in date format  
+    var age_dt = new Date(month_diff);   
+      
+    //extract year from date      
+    var year = age_dt.getUTCFullYear();  
+      
+    //now calculate the age of the user  
+    var age = Math.abs(year - 1970);  
+      
+      document.getElementById("age").value= age;
+}
+
+function getDate(){
+    var date = new Date();
+var currentDate = date.toISOString().slice(0,10);
+document.getElementById("date").value= currentDate;
+}
+function validate()
+{
+  var fname=document.getElementById("first").value;
+var mname=document.getElementById("middle").value;
+var fexp=/^[a-z,A-Z]+$/gi
+if(fexp.test(fname)==false){
+document.getElementById("first").style.border="2px solid red";
+document.getElementById("f1").style.visibility="visible";
+const myTimeout = setTimeout(myGreeting, 5000);
+return false;
+}
+}
+function first1(){
+document.getElementById("f1").style.visibility="hidden";
+document.getElementById("first").style.border="1px solid black";
+}
+function firstname(){
+var k=document.getElementById("first").value;
+var fexp=/^[a-z,A-Z]+$/gi
+if(fexp.test(k)==false){
+document.getElementById("first").style.border="2px solid red";
+document.getElementById("f1").style.visibility="visible";
+setTimeout(first1,5000);
+}
+}
+function middle1(){
+document.getElementById("f3").style.visibility="hidden";
+document.getElementById("middle").style.border="1px solid black";
+}
+function middlename(){
+   var k=document.getElementById("middle").value;
+var fexp=/^[a-z,A-Z]+$/gi
+if(fexp.test(k)==false){
+document.getElementById("middle").style.border="2px solid red";
+document.getElementById("f3").style.visibility="visible";
+setTimeout(middle1,5000);
+}
+}
+function last1(){
+document.getElementById("f2").style.visibility="hidden";
+document.getElementById("last").style.border="1px solid black";
+}
+function lastname(){
+   var k=document.getElementById("last").value;
+var fexp=/^[a-z,A-Z]+$/gi
+if(fexp.test(k)==false){
+document.getElementById("last").style.border="2px solid red";
+document.getElementById("f2").style.visibility="visible";
+setTimeout(last1,5000);
+}
+}
+function numb(){
+document.getElementById("mobile").style.border="1px solid black";
+document.getElementById("num").style.visibility="hidden";
+}
+function number()
+{
+var k=document.getElementById("list1").value;
+var number=document.getElementById("mobile").value;
+if(k=="India"){
+var s=/^[0-9]{10}$/gi;
+if(s.test(number)==false){
+document.getElementById("mobile").style.border="2px solid red";
+document.getElementById("num").style.visibility="visible";
+setTimeout(numb,5000);}
+}
+else{
+var s1=/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+if(s1.test(number)==false){
+document.getElementById("mobile").style.border="2px solid red";
+document.getElementById("num").style.visibility="visible";
+setTimeout(numb,5000);
+}
+}
+}
+function addresscheck(){
+var j=document.getElementById("address").value;
+var withNoDigits = j.replace(/[0-9]/g, '');
+document.getElementById("address").value=withNoDigits;
+}
+
+function change( ){
+document.getElementById("i").src="ashokchakra.png";
+}
+function unchange( ){
+document.getElementById("i").src="logo.png";
+}
+function colorchange( ){
+document.getElementById("i").style.border="10px solid red";
+}
+
+function displayFirstName( ){
+var v=document.getElementById("first").value;
+document.getElementById("a").innerHTML=v;
+}
+function displayMiddleName( ){
+var v=document.getElementById("middle").value;
+document.getElementById("b").innerHTML=v;
+}
+function displayLastName( ){
+var v=document.getElementById("last").value;
+document.getElementById("c").innerHTML=v;
+}
+function emailFocus( ){
+var a=document.getElementById("email").style.backgroundColor="gold";
+}
+function displayPassword( ){
+var v=document.getElementById("pass").value;
+document.getElementById("e").innerHTML=v;
+}
+</script>
+</head>
+<body>
+<center>
+<div >
+			<h1 id="heading"><br>Registration Form</h1>
+       <form action="/jk.php" action="/pls.php" onSubmit="return validate();">
+        	
+ <input type="text"  name="n" id="first" placeholder="First name" minlength="3" required onchange="firstname();"> <p id="f1">contains illegal Characters</p><br><br>
+
+ <input type="text"  name="n"id="middle" placeholder="Middle name" onchange="middlename();"><p id="f3">contains illegal Characters</p><br><br>
+
+ <input type="text" id ="last" placeholder="Last name" minlength="3" onchange="lastname();" required><p id="f2">contains illegal Characters</p><br><br>
+
+ <input type="email"  placeholder="Email " id="email"  required><br><br>
+
+
+
+ <select name="list" id="list1">
+               	   <option value="India" >India</option>
+               	   <option value="USA">USA</option>
+</select><input type="text" placeholder="Mobile number" id="mobile" onchange="number();" required><p id="num">Invalid number</p> <br><br> 
+
+
+<input type="password" id="pass" name="p"placeholder="New password" id="email" name=""required minlength="6" onclick="colorchange( );"><br> <br>
+
+
+
+<p id="hobbies"><b> Choose any two Hobbies</b> </p><br><br>
+<b><p class="hobby">Playing</p> <input type="checkbox" value="Playing" id="play">
+<p class="hobby">Dancing</p> <input type="checkbox" value="Dancing" id="dance">
+<p class="hobby">Singing</p><input type="checkbox" value="Singing" id="sing">
+<p class="hobby">Reading</p><input type="checkbox" value="Reading" id="read"> 
+<br><br>
+</b>
+<p id="pic"><b>Upload your photo</b></p> <input type="file" name="" multiple accept="image/*" id="image">  <br><br>        
+<p id="birth"><b>Birthday</b></p> <input type="date" name="date" name="trip-start"  id="date" onChange="calculate_age()" required> <p class="age"><b>Age</b></p><input type="text"   id="age"  value="0" > <br> <br>
+<p id="addr"><b>Address</b></p><br> <textarea rows="8" cols="42" id="address"  onchange="addresscheck();"></textarea>
+                                            <br><br>
+                 <input type="submit" value="Sign Up" name="s1" id="submit" >      <input type="reset" value="clear the form" id="submit1" name="">
+     <br><br>
+        </form>
+        </div>
+        </center>
+    
+<img src="Rgulogo.jpg" id="i" onmouseover="change( );" onmouseout="unchange( );"><br>
+FirstName:<p id="a">FirstName:</p>
+MiddleName:<p id="b">MiddleName:</p>
+LastName:<p id="c">LastName:</p>
+password:<p id="e">Password:</p>
+<script type="text/javascript">
+var c=document.getElementById("first");
+c.addEventListener('keyup',displayFirstName);
+var d=document.getElementById("middle");
+d.addEventListener('keydown',displayMiddleName);
+var l=document.getElementById("last");
+l.addEventListener('keypress',displayLastName);
+var e=document.getElementById("email");
+e.addEventListener('focus',emailFocus);
+var p=document.getElementById("mobile");
+p.addEventListener('blur',colorchange);
+var q=document.getElementById("pass");
+q.addEventListener('change',displayPassword);
+</script>
+</body>
+</html>

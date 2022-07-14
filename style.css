@@ -1,0 +1,262 @@
+*{
+margin:0;
+padding:0;
+}
+
+body{
+	
+	box-sizing:boreder-box;
+	font-family:sans-serif;
+	
+}
+
+#X{
+	
+	text-align:center;
+	height:100px;
+	
+	
+}
+
+.Y{
+	text-align:left;
+	
+}
+
+#X ul{
+	list-style:none;
+	color:#FF0000;
+	font-size:1.87em;
+	
+}
+.z{
+	position:absolute;
+	left:250px;
+	top:0px;
+}
+.p{
+	top:-20px;
+}
+
+
+
+.logo{
+	margin:0;
+    padding:0;
+	background:#09226B;
+	text-align:center;
+	
+	
+}
+.logo ul{
+	display:inline-flex;
+	list-style:none;
+	color:#fff;
+}
+.logo ul li{
+	width:120px;
+	margin:15px;
+	padding:15px;
+}
+
+.logo ul li a{
+	text-decoration:none;
+	color:#fff;
+	
+}
+
+.active,div.logo ul li:hover{
+	background:#0000FF;
+	border-radius:5px;
+}
+
+
+.submenu{
+	display:none;
+	
+}
+
+.logo ul li:hover .submenu{
+	display:block;
+	position:absolute;
+	background:#000066;
+	margin-top:15px;
+	margin-left:-15px;
+}
+
+.logo ul li:hover .submenu ul{
+	display:block;
+	margin:10px;
+}
+
+.logo ul li:hover .submenu ul li{
+	width:150px;
+	padding:10px;
+	border-bottom:1px dotted #fff;
+	background:transparent;
+	border-radius:0;
+	text-align:left;
+	
+}
+
+.logo ul li:hover .submenu ul li:last-child{
+	border-bottom:none;
+}
+
+.logo ul li:hover .submenu ul li a:hover{
+	color:#FB7299;
+}
+
+.fa-angle-right{
+	float:right;
+}
+
+.submenu1{
+	display:none;
+}
+
+.hoverme:hover .submenu1
+{
+	position:absolute;
+	
+	display:block;
+	margin-top:-40px;
+	margin-left:140px;
+	background:#00FF00;
+}
+
+@media(max-width:940px){
+	div.logo ul{
+	position:fixed;
+	top:80px;
+	left:0px;
+	background:#111;
+	height:100vh;
+	width:100%;
+	display:block;
+	text-align:center;
+	}
+
+	.logo ul li{
+		margin:40px 0;
+	}
+
+	.logo ul li a{
+		font-size:20px;
+	}
+}
+
+.N header{
+	font-size:22px;
+	color:#fff;
+	text-align:center;
+	line-height:60px;
+	background:#0000FF;
+	user-select:none;
+}
+
+.N{
+	padding:100px 0px;
+	position:fixed;
+	width:250px;
+	height:100vh;
+	background:#09226B;
+	top:90px;
+	right:-250px;
+	bottom:20px;
+	transition:all .5s ease;
+	
+}
+
+.N ul li{
+	
+	list-style:none;
+	
+}
+
+.N ul  li a{
+	display:block;
+	height:100%;
+	width:100%;
+	line-height:65px;
+	font-size:20px;
+	color:#fff;
+	padding-left:40px;
+	box-sizing:border-box;
+	border-top:1px solid rgb(255,255,255,0.2 );
+	border-bottom:1px solid black;
+	transition:.4s;
+
+}
+
+ul li:hover a{
+	padding-left:50px;
+}
+
+ul li:hover a{
+	padding-right:16px;
+}
+
+
+label #btn,label #cancel{
+	position:absolute;
+	cursor:pointer;
+	background:#09226B;
+	border-radius:3px;
+}
+
+label #btn{
+	right:40px;
+	top:25px;
+	font-size:35px;
+	color:#fff;
+	padding:6px 12px;
+	transition:all .5s;
+	
+}
+
+label #cancel{
+	z-index:1111;
+	right:-30px;
+	top:100px;
+	font-size:30px;
+	color:#0a5275;
+	padding:4px 9px;
+	transition:all .5s ease;
+	background:#0000FF;
+}
+
+#check:checked ~ .N{
+	right:0;
+}
+
+#check:checked ~ label #btn{
+	right:250px;
+	opacity:0;
+	pointer-events:none;
+}
+
+#check:checked ~ label #cancel{
+	right:195px;
+	
+}
+
+#check{
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
